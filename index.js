@@ -4,6 +4,7 @@ import { $ } from "zx"
 import yargs from "yargs"
 import { hideBin } from "yargs/helpers"
 import chalk from "chalk"
+import ora from "ora"
 
 $.verbose = false
 
@@ -18,8 +19,13 @@ const stopWifi = async () => {
 }
 
 const listSsid = async () => {
+  const spinner = ora("Loading...").start()
+  spinner.color = "blue"
+
   const result =
     await $`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s`
+
+  spinner.stop()
   console.log(result.stdout)
 }
 
