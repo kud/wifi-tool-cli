@@ -7,16 +7,18 @@ A simple command line tool to manage your WiFi settings on macOS.
 1. [Features](#features)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [License](#license)
+4. [Support](#support)
+5. [License](#license)
 
 ## Features
 
-- Easily **start** or **stop** your WiFi.
-- List available **SSIDs** around you (Note: doesn't work when sharing is ON).
+- **Start**, **Stop**, or **Restart** your WiFi with ease.
+- **List** available SSIDs around you. (Note: doesn't work when sharing is ON).
+- **Info**: Display the current network's information.
 
 ## Installation
 
-Make sure you have Node.js installed. If not, download it from [Node.js official website](https://nodejs.org/).
+Make sure you have Node.js installed. If not, download it from the [Node.js official website](https://nodejs.org/).
 
 Then, install the tool globally:
 
@@ -35,8 +37,14 @@ $ wifi-tool start
 # To stop the WiFi
 $ wifi-tool stop
 
+# To restart the WiFi
+$ wifi-tool restart
+
 # To list SSIDs
 $ wifi-tool list
+
+# To get info about the current network
+$ wifi-tool info
 ```
 
 For more options:
